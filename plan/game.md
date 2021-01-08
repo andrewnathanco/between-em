@@ -5,4 +5,8 @@
     - game must have unique id
     - game must only have 10 players
     - each game has a host
+  - Change settings on a game
+    - Tasks
+    - Rooms
+    - Imposters
   

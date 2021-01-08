@@ -23,6 +23,10 @@ mongoose.connect(`${env.mongoURI}/gamesetmatch`, { useNewUrlParser: true, useUni
     console.error(e);
 })
 
+app.get('*', (req, res) => {
+   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+
 // start server
 app.listen(port, async () => {
     // tslint:disable-next-line:no-console
