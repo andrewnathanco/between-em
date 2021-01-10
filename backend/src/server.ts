@@ -1,14 +1,24 @@
 // import mongodb
-import mongoose from "mongoose";
-
+import mongoose from "mongoose"; 
 // import app
 import app from "./api/router";
 
 // import config
 import env from "./config/index";
 
+const http = require("http").createServer(app);
+const io = require("socket.io")(http, {
+  cors: { origin: "*" } 
+});
+
+io.on("connection", (socket: any) => {
+  socket.on("join room", (message: any) => {
+    console.log(message);
+  });
+});
+
 // initialize
-const port = env.port || 5000;
+const port = env.port || 3000;
 
 // set mongoose
 mongoose.set('useNewUrlParser', true);
@@ -23,12 +33,8 @@ mongoose.connect(`${env.mongoURI}/gamesetmatch`, { useNewUrlParser: true, useUni
     console.error(e);
 })
 
-app.get('*', (req, res) => {
-   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
-
 // start server
-app.listen(port, async () => {
+http.listen(port, async () => {
     // tslint:disable-next-line:no-console
     console.log(`between-em API running on port ${port}`);
-})
+});
