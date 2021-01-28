@@ -4,7 +4,7 @@
   // import socket io
   import io from "socket.io-client";
 
-  const socket = io("https://08a3d78003de.ngrok.io", { transports: ["websocket"] });
+  const socket = io("http://localhost:3000", { transports: ["websocket"] });
   
   let name;
   let code;

@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35735/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -5236,30 +5236,30 @@ var app = (function () {
     			div5 = element("div");
     			button1 = element("button");
     			button1.textContent = "Create a game...";
-    			add_location(h1, file, 77, 6, 1571);
+    			add_location(h1, file, 77, 6, 1563);
     			attr_dev(div0, "class", "title-container");
-    			add_location(div0, file, 76, 4, 1535);
+    			add_location(div0, file, 76, 4, 1527);
     			attr_dev(input0, "placeholder", "Write me a message...");
-    			add_location(input0, file, 80, 6, 1642);
+    			add_location(input0, file, 80, 6, 1634);
     			attr_dev(div1, "class", "name-container");
-    			add_location(div1, file, 79, 4, 1607);
-    			add_location(h30, file, 86, 6, 1781);
+    			add_location(div1, file, 79, 4, 1599);
+    			add_location(h30, file, 86, 6, 1773);
     			attr_dev(div2, "class", "either-container");
-    			add_location(div2, file, 85, 4, 1744);
+    			add_location(div2, file, 85, 4, 1736);
     			attr_dev(input1, "placeholder", "Enter a room code...");
-    			add_location(input1, file, 89, 6, 1850);
-    			add_location(button0, file, 93, 6, 1942);
+    			add_location(input1, file, 89, 6, 1842);
+    			add_location(button0, file, 93, 6, 1934);
     			attr_dev(div3, "class", "code-container svelte-zxyn31");
-    			add_location(div3, file, 88, 4, 1815);
-    			add_location(h31, file, 98, 6, 2059);
+    			add_location(div3, file, 88, 4, 1807);
+    			add_location(h31, file, 98, 6, 2051);
     			attr_dev(div4, "class", "divider-container svelte-zxyn31");
-    			add_location(div4, file, 97, 4, 2021);
-    			add_location(button1, file, 101, 6, 2126);
+    			add_location(div4, file, 97, 4, 2013);
+    			add_location(button1, file, 101, 6, 2118);
     			attr_dev(div5, "class", "create-container svelte-zxyn31");
-    			add_location(div5, file, 100, 4, 2089);
+    			add_location(div5, file, 100, 4, 2081);
     			attr_dev(div6, "class", "root svelte-zxyn31");
-    			add_location(div6, file, 75, 2, 1512);
-    			add_location(main, file, 74, 0, 1503);
+    			add_location(div6, file, 75, 2, 1504);
+    			add_location(main, file, 74, 0, 1495);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5338,7 +5338,7 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Home", slots, []);
-    	const socket = io("https://08a3d78003de.ngrok.io", { transports: ["websocket"] });
+    	const socket = io("http://localhost:3000", { transports: ["websocket"] });
     	let name;
     	let code;
 
